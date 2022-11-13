@@ -1,0 +1,1 @@
+Poner el símbolo de grado (°): en Windows, Mac y Word
