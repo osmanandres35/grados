@@ -1,0 +1,7 @@
+GOOGLER_VERSION=$(curl -s "https://api.github.com/repos/jarun/googler/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
+sudo curl -o /usr/local/bin/googler "https://raw.githubusercontent.com/jarun/googler/v${GOOGLER_VERSION}/googler"
+sudo chmod a+x /usr/local/bin/googler
+
+test: googler single-board computers wiki
+
+uninstall: sudo rm -rf /usr/local/bin/googler
